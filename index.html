@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Gradient</title>
+    <link href="style.css" type="text/css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Merriweather&display=swap" rel="stylesheet">
+</head>
+<header>
+    <nav class="navbar"></nav>
+</header>
+<body>
+    <div id="app" :style="{background: gradient}">
+        <!-- dia baca id app, jadi kalau mau taro di body, bodynya dikasi id app -->
+            <div class="animation">
+                <div class="ghost-container">
+                    <div class="light light-1 blink-1"></div>
+                    <div class="light light-2 blink-2"></div>
+                    <div class="light light-3 blink-1"></div>
+                    <div class="light light-4 blink-2"></div>
+                    <div class="light light-5 blink-3"></div>
+                    <div class="body-ghost">
+                        <div class="eye-ghost">
+                            <div class="eye"></div>
+                            <div class="eye"></div>
+                        </div>
+                        <div class="pink-ghost">
+                            <div class="pink"></div>
+                            <div class="pink"></div>
+                        </div>
+                        <div class="mouth-ghost">
+                            <div class="mouth"></div>
+                        </div>
+                        <div class="hand-ghost">
+                            <div class="hand-l"></div>
+                            <div class="hand-r"></div>
+                        </div>
+                        <div class="feet-ghost">
+                            <div class="feet feet-1"></div>
+                            <div class="feet feet-2"></div>
+                            <div class="feet feet-1"></div>
+                            <div class="feet feet-2"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container" id="input-container">
+                        <div class="gradient-stop" v-for="(input, index) in gradientStops" :key="index">
+                            <input v-model="gradientStops[index]" type="text" placeholder="Enter a hex code" />
+                            <div @click="removeGradient(index)" class="gradient-stop-delete" v-if="gradientStops.length > 2">
+                                <img src="https://image.flaticon.com/icons/svg/1632/1632708.svg">
+                            </div>
+                            <button @click="AddNewGradient">
+                                <img src="https://image.flaticon.com/icons/svg/753/753317.svg">
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>

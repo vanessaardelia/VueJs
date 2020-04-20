@@ -1,0 +1,289 @@
+#app{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Merriweather', serif;
+}
+
+button {
+    background: white;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    border: 0px solid transparent;
+    margin-left: 10px;
+}
+
+button > img{
+    height: 25px; 
+    width: 25px;
+}
+
+button:hover{
+    cursor: pointer;
+    background: tomato;
+}
+
+.navbar{
+    position: fixed;
+    top: 0px;
+    animation: pulse 5s infinite;
+    width: 100%;
+    height: 40px;
+}
+
+@keyframes pulse {
+    0% {
+      background-color: #e1eec3;
+    }
+    100% {
+      background-color:#f05053;
+    }
+  }
+
+.container{
+    position: fixed;
+    bottom: 8%;
+}
+
+.gradient-stop{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.gradient-stop input{
+    height: 30px; 
+    padding-left: 8px;
+    border: 0px solid transparent;
+    width: 200px;
+    border-radius: 10px;
+    margin-right: 10px;
+}
+
+.gradient-stop-delete{
+    background: white;
+    width: 30px;
+    height: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+}
+
+.gradient-stop-delete:hover{
+    cursor: pointer;
+    background: tomato;
+}
+
+.gradient-stop-delete > img{
+    height: 16px; 
+    width: 16px;
+}
+
+.animation{
+    height: 70%;
+}
+
+:root {
+    --dark: #272B24;
+    --light: #F0EFDA;
+    --pink: #FCAFAF;
+    --light-b: #B5FFFA;
+    --light-y: #FFFA65;
+    --light-o: #FF9747;
+    --shadow: #131411;
+  }
+  
+  *, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .ghost-container {
+      height: 310px;
+      display: flex;
+  }
+  
+  .body-ghost {
+      width: 240px;
+      height: 310px;
+      background: var(--light);
+      border-radius: 200px 200px 0 0;
+      padding-top: 100px;
+  }
+  
+  .eye-ghost {
+      display: flex;
+      justify-content: space-evenly;
+  }
+  
+  .eye {
+      width: 35px;
+      height: 35px;
+      background: var(--dark);
+      border-radius: 50%;
+  }
+  
+  .pink-ghost {
+      display: flex;
+      justify-content: space-evenly;
+      margin-top: 10px;
+  }
+  
+  .pink {
+      width: 40px;
+      height: 12px;
+      background: var(--pink);
+      border-radius: 50%;
+  }
+  
+  .mouth-ghost {
+      display: flex;
+      justify-content: center;
+      margin-top: 10px;
+  }
+  
+  .mouth {
+      width: 50px;
+      height: 25px;
+      background: var(--dark);
+      border-radius: 10px 10px 90px 90px;
+  }
+  
+  .hand-ghost {
+      display: flex;
+      justify-content: space-between;
+  }
+  
+  .hand-l {
+      width: 65px;
+      height: 120px;
+      background: var(--light);
+      position: relative;
+      top: -80px;
+      left: -50px;
+      border-radius: 100px 100px 0 0;
+      transform: rotate(-60deg);
+  }
+  
+  .hand-r {
+      width: 65px;
+      height: 120px;
+      background: var(--light);
+      position: relative;
+      top: -80px;
+      right: -50px;
+      border-radius: 100px 100px 0 0;
+      transform: rotate(60deg);
+  }
+  
+  .feet-ghost {
+      display: flex;
+      justify-content: center;
+  }
+  
+  .feet {
+      width: 80px;
+      height: 60px;
+      background: var(--light);
+      position: relative;
+      bottom: 12px;
+      border-radius: 0 0 60px 60px
+  }
+  
+  .shadow-ghost {
+      width: 230px;
+      height: 30px;
+      background: var(--shadow);
+      border-radius: 200px;
+      position: absolute;
+      bottom: 0;
+  }
+
+  .ghost-container:hover .body-ghost {
+      animation: upDown 3s ease infinite;
+  }
+  
+  .ghost-container:hover .shadow-ghost{
+      animation: ciut 3s ease infinite;
+  }
+  
+  .ghost-container:hover .feet-1 {
+          animation: kaki1 3s ease infinite;
+  }
+  
+  .ghost-container:hover .feet-2 {
+      animation: kaki2 3s ease infinite;
+  }
+  
+  @keyframes upDown {
+      0% {
+          transform: translateY(-20px);
+      }
+      50% {
+          transform: translateY(20px);
+      }
+      100% {
+          transform: translateY(-20px);
+      }
+  }
+  
+  @keyframes ciut {
+      0% {
+          width: 230px;
+      }
+      50% {
+          width: 180px;
+      }
+  }
+  
+  @keyframes kaki1 {
+      0% {
+          transform: translateY(0);
+      }
+      50% {
+          transform: translateY(-10px);
+      }
+      100% {
+          transform: translateY(0);
+      }
+  }
+  
+  @keyframes kaki2 {
+      0% {
+          transform: translateY(-15px);
+      }
+      50% {
+          transform: translateY(0);
+      }
+      100% {
+          transform: translateY(-15px);
+      }
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
